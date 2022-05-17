@@ -1,0 +1,1 @@
+export { registerBaseComponents } from './registerBaseComponents';
