@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputSpecial General Behavior renders correctly 1`] = `
+<div
+  class="input-special"
+>
+  <input
+    aria-label="some input"
+    class="input-special__field"
+    type="text"
+  />
+</div>
+`;
