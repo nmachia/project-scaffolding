@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import { registerBaseComponents } from '@/helpers';
+import vuetify from '@terakeet/styleguide/src/lib/lib-vuetify';
 
 Vue.config.productionTip = false;
 
@@ -17,5 +18,6 @@ if (process.env.NODE_ENV !== 'development') {
 new Vue({
 	router,
 	store,
+	vuetify,
 	render: (h) => h(App),
 }).$mount('#app');
