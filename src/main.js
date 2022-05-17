@@ -1,3 +1,4 @@
+/* eslint no-console: 0 */
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -7,6 +8,11 @@ import { registerBaseComponents } from '@/helpers';
 Vue.config.productionTip = false;
 
 registerBaseComponents(Vue);
+
+Vue.config.devtools = process.env.NODE_ENV === 'development';
+if (process.env.NODE_ENV !== 'development') {
+	console.log = function () {};
+}
 
 new Vue({
 	router,
