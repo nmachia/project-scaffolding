@@ -59,4 +59,8 @@
 		name: 'App',
 	};
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+	.my-global-class {
+		color: red;
+	}
+</style>

@@ -12,7 +12,7 @@
 		</div>
 		<!-- Error -->
 		<div v-if="fetchDogStatusError">
-			<p>Oops, there was a problem</p>
+			<p class="customer-report__error">Oops, there was a problem</p>
 		</div>
 		<!-- Success -->
 		<div v-if="fetchDogStatusSuccess">
@@ -66,4 +66,10 @@
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	.customer-report {
+		&__error {
+			color: var(--v-error-base);
+		}
+	}
+</style>
