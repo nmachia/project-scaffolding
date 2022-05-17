@@ -1,4 +1,8 @@
-# project_scaffold
+# Project Scaffold
+
+This is a general project scaffolding for Vue projects. This project is a standalone application and uses the Vue CLI to build/serve the output. It will most likely need to be tailored to meet your specific project needs. The commit history was recored with this in mind, in an attempt to show each step that was implemented.  
+
+> **NOTE:** you will also need a `.npmrc` file to pull `@terakeet/styleguide` from it's repository.  The `.npmrc` file is not committed here, as it includes private keys. See the [Typical Install Process](https://terakeet-styleguide-staging.herokuapp.com/storybook/?path=/docs/getting-started-installation--page#typical-install-process) for more details.
 
 ## Project setup
 
@@ -6,25 +10,27 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
+
+This will typically run at `localhost:8080`
 
 ```bash
 yarn serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 
 ```bash
 yarn build
 ```
 
-### Run your unit tests
+#### Run your unit tests
 
 ```bash
 yarn test:unit
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 
 ```bash
 yarn lint
@@ -110,6 +116,35 @@ Views are the various features of our application.  They contain all feature-rel
 
 Unit tests should test the expected behaviour of individual componets.  Tests are held within a `__tests__` directory at the same level as the component they are testing.  Jest and Vue Test Utils work in tandem as the Frontend testing suite.
 
+#### Relevant Files
+
+- `jest.config.js`
 #### Example
 
 - `src/components/common/InputSpecial/__tests__/InputSpecial.spec.js`
+
+### Linting and Prettier
+
+This project uses ESLint, Prettier, and Stylelint to maintain code standards.  Having a standard is more important than what that standard is. 
+
+If you are using VS Code you can add the following settings to run Prettier on save.
+
+```javascript
+// in .vscode/settings.jscon
+
+{
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+
+
+```
+
+#### Relevant Files
+
+- `.eslintrc.js`
+- `.prettierignore`
+- `prettier.config.js`
+- `stylelint.config.js`
