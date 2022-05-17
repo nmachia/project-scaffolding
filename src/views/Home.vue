@@ -1,10 +1,10 @@
 <template>
-	<div class="home">
-		<h1>Home</h1>
+	<v-container fluid class="home">
+		<h1 class="text-h4">Home</h1>
 		<ul>
 			<li><router-link to="/customer-reports">Customer Reports</router-link></li>
 		</ul>
-	</div>
+	</v-container>
 </template>
 
 <script>

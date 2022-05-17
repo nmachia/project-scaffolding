@@ -1,13 +1,13 @@
 <template>
-	<div>
-		<h1>Customer Report Edit: {{ id }}</h1>
-		<div>Increment on mount: {{ count }}</div>
+	<v-container fluid class="customer-report-edit">
+		<h1 class="text-h4">Customer Report Edit: {{ id }}</h1>
+		<div>Increment on mount (not connected to :id prop): {{ count }}</div>
 		<div>Doubled increment: {{ doubleCount }}</div>
-		<button @click="increment">Increment Manually</button>
+		<v-btn color="primary" small @click="increment">Increment Manually</v-btn>
 		<div>
 			<router-link :to="{ name: 'CustomerReportShow', params: { id } }">View Report</router-link>
 		</div>
-	</div>
+	</v-container>
 </template>
 
 <script>

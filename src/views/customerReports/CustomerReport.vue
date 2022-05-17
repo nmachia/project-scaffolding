@@ -1,10 +1,10 @@
 <template>
-	<div>
-		<h1>Customer Report: {{ id }}</h1>
+	<v-container fluid class="customer-report">
+		<h1 class="text-h4">Customer Report: {{ id }}</h1>
 		<customer-report-subtitle>A single report</customer-report-subtitle>
 		<!-- Idle -->
 		<div v-if="fetchDogStatusIdle">
-			Press the button to fetch a nice dog. <button @click="fetchDog">fetch Dog</button>
+			Press the button to fetch a nice dog. <v-btn color="primary" small @click="fetchDog">fetch Dog</v-btn>
 		</div>
 		<!-- Pending -->
 		<div v-if="fetchDogStatusPending">
@@ -22,7 +22,7 @@
 			<li><router-link :to="{ name: 'CustomerReportEdit', params: { id } }">Edit</router-link></li>
 			<li><router-link :to="{ name: 'CustomerReportsShow' }">Browse Reports</router-link></li>
 		</ul>
-	</div>
+	</v-container>
 </template>
 
 <script>

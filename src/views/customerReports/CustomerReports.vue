@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<h1>Customer Reports</h1>
+	<v-container fluid class="customer-reports">
+		<h1 class="text-h4">Customer Reports</h1>
 		<customer-report-subtitle>Browse all Customer Reports</customer-report-subtitle>
 		<ul>
 			<li v-for="n in 3" :key="n">
@@ -9,7 +9,7 @@
 				>
 			</li>
 		</ul>
-	</div>
+	</v-container>
 </template>
 
 <script>
